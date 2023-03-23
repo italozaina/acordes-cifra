@@ -193,7 +193,7 @@ function criarTitulo(texto) {
 
 const bibliotecaAcordesBasicos = [
     { n: 'C', m: 'X 3 2 0 1 0', d: '032010', p: null},
-    { n: 'C#', m: 'X 4 6 6 5 4', d: '013421', p: true},
+    { n: 'C#', m: 'X 4 6 6 56 4', d: '012341', p: true},
     { n: 'D', m: 'X X 0 2 3 2', d: '000132', p: null},
     { n: 'D#', m: 'X 6 8 8 8 6', d: '012341', p: true},
     { n: 'E', m: '0 2 2 1 0 0', d: '023100', p: null},
@@ -208,7 +208,7 @@ const bibliotecaAcordesBasicos = [
 
 const bibliotecaAcordesBasicos2 = [
     { n: 'C', m: 'X 3 5 5 5 3', d: '012341', p: true},
-    { n: 'Db', m: 'X 4 6 6 5 4', d: '013421', p: true},
+    { n: 'Db', m: 'X 4 6 6 6 4', d: '012341', p: true},
     { n: 'D', m: 'X 5 7 7 7 5', d: '012341', p: true},
     { n: 'Eb', m: 'X 6 8 8 8 6', d: '012341', p: true},
     { n: 'E', m: 'X 7 9 9 9 7', d: '012341', p: true},
@@ -219,6 +219,21 @@ const bibliotecaAcordesBasicos2 = [
     { n: 'A', m: '5 7 7 6 5 5', d: '134211', p: true},
     { n: 'Bb', m: 'X 1 3 3 3 1', d: '012341', p: true},
     { n: 'B', m: '7 9 9 8 7 7', d: '134211', p: true},    
+];
+
+const bibliotecaAcordesMenores = [
+    { n: 'Cm', m: 'X 3 5 5 4 3', d: '013421', p: true},,
+    { n: 'C#m', m: 'X 4 6 6 5 4', d: '013421', p: true},
+    { n: 'Dm', m: 'X X 0 2 3 1', d: '000321', p: null},
+    { n: 'D#m', m: 'X 6 8 8 7 6', d: '013421', p: true},
+    { n: 'Em', m: '0 2 2 0 0 0', d: '023000', p: null},
+    { n: 'Fm', m: '1 3 3 1 1 1', d: '134111', p: true},
+    { n: 'F#m', m: '2 4 4 2 2 2', d: '134111', p: true},
+    { n: 'Gm', m: '3 5 5 3 3 3', d: '134111', p: true},
+    { n: 'G#m', m: '4 6 6 4 4 4', d: '134111', p: true},
+    { n: 'Am', m: 'X 0 2 2 1 0', d: '0023100', p: null},
+    { n: 'A#m', m: 'X 1 3 3 2 1', d: '013421', p: true},
+    { n: 'Bm', m: 'X 2 4 4 3 2', d: '013421', p: true},    
 ];
 
 
@@ -234,6 +249,13 @@ bibliotecaAcordesBasicos.forEach(acorde => {
 this.criarTitulo('Acordes Básicos II');
 
 bibliotecaAcordesBasicos2.forEach(acorde => {
+    let novoAcorde = new Acorde(acorde.n, acorde.m, acorde.d,acorde.p)
+    novoAcorde.montaAcorde();
+});
+
+this.criarTitulo('Acordes Menores');
+
+bibliotecaAcordesMenores.forEach(acorde => {
     let novoAcorde = new Acorde(acorde.n, acorde.m, acorde.d,acorde.p)
     novoAcorde.montaAcorde();
 });
