@@ -193,7 +193,7 @@ function criarTitulo(texto) {
 
 const bibliotecaAcordesBasicos = [
     { n: 'C', m: 'X 3 2 0 1 0', d: '032010', p: null},
-    { n: 'C#', m: 'X 4 6 6 56 4', d: '012341', p: true},
+    { n: 'C#', m: 'X 4 6 6 6 4', d: '012341', p: true},
     { n: 'D', m: 'X X 0 2 3 2', d: '000132', p: null},
     { n: 'D#', m: 'X 6 8 8 8 6', d: '012341', p: true},
     { n: 'E', m: '0 2 2 1 0 0', d: '023100', p: null},
@@ -236,6 +236,21 @@ const bibliotecaAcordesMenores = [
     { n: 'Bm', m: 'X 2 4 4 3 2', d: '013421', p: true},    
 ];
 
+const bibliotecaAcordesSetima = [
+    { n: 'C7', m: 'X 3 2 3 1 0', d: '032410', p: null},
+    { n: 'C#7', m: 'X 4 6 4 6 4', d: '012131', p: true},
+    { n: 'D7', m: 'X X 0 2 1 2', d: '000213', p: null},
+    { n: 'D#7', m: 'X 6 8 6 8 6', d: '012131', p: true},
+    { n: 'E7', m: '0 2 0 1 0 0', d: '020100', p: null},
+    { n: 'F7', m: '1 3 1 2 1 1', d: '131211', p: true},
+    { n: 'F#7', m: '2 4 2 3 2 2', d: '131211', p: true},
+    { n: 'G7', m: '3 2 0 0 0 1', d: '320001', p: null},
+    { n: 'G#7', m: '4 6 4 5 4 4', d: '131211', p: true},
+    { n: 'A7', m: 'X 0 2 0 2 0', d: '0010300', p: null},
+    { n: 'A#7', m: 'X 1 3 1 3 1', d: '012131', p: true},
+    { n: 'B7', m: 'X 2 4 2 4 2', d: '012131', p: true},    
+];
+
 
 // Para melhorar a separação dos testes será inserido um título entre as partes
 
@@ -256,6 +271,13 @@ bibliotecaAcordesBasicos2.forEach(acorde => {
 this.criarTitulo('Acordes Menores');
 
 bibliotecaAcordesMenores.forEach(acorde => {
+    let novoAcorde = new Acorde(acorde.n, acorde.m, acorde.d,acorde.p)
+    novoAcorde.montaAcorde();
+});
+
+this.criarTitulo('Acordes 7ª');
+
+bibliotecaAcordesSetima.forEach(acorde => {
     let novoAcorde = new Acorde(acorde.n, acorde.m, acorde.d,acorde.p)
     novoAcorde.montaAcorde();
 });
