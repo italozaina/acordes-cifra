@@ -1,11 +1,15 @@
 document.getElementById('ajustar').onclick = function () {
-    const notes = "[CDEFGAB]",
-    accidentals = "(b|bb)?",
-    chords = "(m|maj7|maj|min7|min|sus)?",
-    suspends = "(1|2|3|4|5|6|7|8|9)?",
-    sharp = "(#)?",
-    regex = new RegExp("("+"\\b" + notes + accidentals + chords + suspends + "\\b" + sharp+")", "g");
+    // (?:[A-G](?:b|bb)*(?:#|##|sus|maj|min|aug|m|M|\\+|-|dim)*[\d\/]*)*)(?=\s|$)(?! \w))
 
+    const notas = "[A-G]",
+    acentuacoes = "(?:b|bb)",
+    acordes = "*(?:#|##|sus|maj|min|aug|m|M|\\+|-|dim)",
+    com = "*[\\d\\/]*",
+    numeros = "*(?:[1-9])",
+    foraMusica = "(?=\\s|$)(?! \\w)",
+    padrao = "("+"\\b(" + notas + acentuacoes + numeros + acordes + com + '(?:' + notas + acentuacoes + acordes + com + ')*)'+foraMusica+")",
+    regex = new RegExp(padrao, "g");
+    
     const textoMusica = document.getElementsByTagName('textarea')[0].value;
     let separadoPorLinhas = textoMusica.split('\n');
 
@@ -14,7 +18,7 @@ document.getElementById('ajustar').onclick = function () {
     campo.innerHTML = "";
     separadoPorLinhas.forEach(linha => {
         if(linha.match(regex)){
-            alterado.push(linha.replace(regex,"<span data-acorde=\"$1\">$1</span>"));
+            alterado.push(linha.replace(regex,"<b>$1</b>"));
         }else{
             alterado.push(linha);
         }
