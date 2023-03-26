@@ -33,23 +33,33 @@ document.getElementById('ajustar').onclick = function () {
     let pre = document.createElement('pre');
     pre.innerHTML = alterado.join('\n');
     campo.appendChild(pre);
-
+    function removerDaTela(element) {
+        if(element.target.querySelector('div')){
+            element.target.querySelector('div').remove();
+        }
+    }
     document.querySelectorAll('#resultado > pre > b').forEach(element => {
-        element.addEventListener("mouseenter", function(element) {
-            console.log('passou sobre o acorde', element.target.innerText);
-            if(!element.target.querySelector('div')){
-                console.log(element);
+        element.addEventListener("mouseenter", function(element) {            
+            if(!element.target.querySelector('div')){                
                 let campoAcorde = document.createElement('div');
-                campoAcorde.style = "height: 140px; width: 110px; position:absolute; top: "+(element.target.offsetTop-145)+"px; left: "+(element.target.offsetLeft - element.target.offsetWidth/2)+"px; background-color: #000; color: #FFF; z-index: 100;"
-                campoAcorde.innerHTML = 'acorde: '+element.target.innerText;
+                campoAcorde.style = "height: 140px; width: 110px; position:absolute; top: "+(element.target.offsetTop-140)+"px; left: "+(element.target.offsetLeft + (element.target.offsetWidth/2) - 55)+"px; background-color: transparent; z-index: 100;"     
+                let acorde = biblioteca.getAcordePorCifra(element.target.innerText);                
+                let novoAcorde = new Acorde(acorde.n, acorde.m, acorde.d,acorde.p);
+                campoAcorde.appendChild(novoAcorde.montaAcorde());
                 element.target.appendChild(campoAcorde);
             }
         });
-        element.addEventListener("mouseleave", function(element) {
-            if(element.target.querySelector('div')){
-                element.target.querySelector('div').remove()
-            }
 
+        element.addEventListener("mouseleave", removerDaTela);
+
+        element.addEventListener("click", function(element) {
+            if(this.getAttribute('tela') != 'true'){
+                this.setAttribute("tela", "true");
+                this.removeEventListener("mouseleave", removerDaTela, false);
+            } else {
+                this.setAttribute("tela", "null");
+                this.addEventListener("mouseleave", removerDaTela);
+            }
         });
     });
 };
