@@ -1,4 +1,4 @@
-document.getElementById('ajustar').onclick = function () {
+function transformar(textoMusica) {
     // (?:[A-G](?:b|bb)*(?:#|##|sus|maj|min|aug|m|M|\\+|-|dim)*[\d\/]*)*)(?=\s|$)(?! \w))
 
     const notas = "[A-G]",
@@ -9,8 +9,7 @@ document.getElementById('ajustar').onclick = function () {
     foraMusica = "(?=\\s|$)(?! \\w)",
     padrao = "("+"\\b(" + notas + acentuacoes + numeros + acordes + com + '(?:' + notas + acentuacoes + acordes + com + ')*)'+foraMusica+")",
     regex = new RegExp(padrao, "g");
-    
-    const textoMusica = document.getElementsByTagName('textarea')[0].value;
+        
     let separadoPorLinhas = textoMusica.split('\n');
 
     alterado = [];
@@ -63,3 +62,17 @@ document.getElementById('ajustar').onclick = function () {
         });
     });
 };
+
+function carregaArquivo(nomeArquivo){
+    fetch(`/musicas/${nomeArquivo}.txt`)
+    .then(function(response) {
+        response.text().then(function(text) {  
+        transformar(text);
+        });
+    });
+}
+
+function abrirMusica(event){
+    let nome = event.target.getAttribute('data-arquivo');    
+    carregaArquivo(nome)    
+}

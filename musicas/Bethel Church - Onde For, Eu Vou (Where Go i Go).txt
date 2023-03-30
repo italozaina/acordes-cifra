@@ -49,7 +49,7 @@ E o que fizeste por nós
                     Em
 E o que fizeste por nós
 
------------------ Acordes -----------------
+[Acordes]
 A = X 0 2 2 2 0
 Bm = X 2 4 4 3 2
 Em = 0 2 2 0 0 0

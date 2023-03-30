@@ -1,0 +1,126 @@
+Trazendo a Arca - Tua Graça Me Basta
+
+[Intro] E/C#  E/B  A9  E/G#  A9/F#
+        E/C#  E/C#  E/B  A9  E/G#  A9/F#  B4  B9
+
+E9                               E4   B/E
+ Eu não preciso ser reconhecido por ninguém
+E9                                 E4            E4
+ A minha Glória é fazer com que conheçam a Ti
+C#m      B9    A9                        F#m           B9
+ E que diminua eu pra que Tu cresças senhor mais e mais
+
+E                                         A9
+ E como os serafins que encobrem o rosto ante a Ti
+E                                   A9
+ Escondo o rosto para que vejam Tua face em mim
+C#m    B9        A9                      F#m           B9
+ e que diminua eu pra que Tu cresças senhor mais e mais
+
+               A9                  F#m
+No santo dos santos a fumaça me esconde
+                 C#m        B9            A9         F#m
+Só teus olhos me veem    debaixo de Tuas asas é meu abrigo
+             C#m               B9  A9            B9                 E
+Meu lugar secreto só Tua graça me basta e Tua presença é o meu prazer
+
+( A  E/G#  F#m  C#m  B  A  E/G#  F#m  C#m  B  A  B  E )
+
+E|--------7-7/9------------7-7/9-------------|
+B|------9--------7/9-7-9--9-------10-9--7----|
+G|-------------9----------------9---------9--|
+D|-------------------------------------------|
+A|-------------------------------------------|
+E|-------------------------------------------|
+
+E                               A9
+ Eu não preciso ser reconhecido por ninguém
+E                                   A9
+ A minha Glória é fazer com que conheçam a Ti
+C#m      B9    A9                        F#m           B
+ E que diminua eu pra que Tu cresças senhor mais e mais
+
+E                                         A9
+ E como os serafins que encobrem o rosto ante a Ti
+E                                    A9
+ Escondo o rosto para que vejam Tua face em mim
+C#m      B9    A9                        F#m           B
+ e que diminua eu pra que Tu cresças senhor mais e mais
+
+               A9                 F#m
+No santo dos santos a fumaça me esconde
+                 C#m       B9             A9         F#m
+Só teus olhos me veem    debaixo de Tuas asas é meu abrigo
+             C#m               B9  A9             B9                E
+Meu lugar secreto só Tua graça me basta e Tua presença é o meu prazer
+               A9                 F#m
+No santo dos santos a fumaça me esconde
+                 C#m        B9            A9         F#m
+Só teus olhos me veem    debaixo de Tuas asas é meu abrigo
+             C#m               B9  A9             B9                E
+Meu lugar secreto só Tua graça me basta e Tua presença é o meu prazer
+
+[Solo] A E/G# F#m C#m7 B A B E
+
+E|------------------------------------------|
+B|--4/5-4-----------------------------------|
+G|-------4-4-6-6-4/6-4-------------4-6------|
+D|---------------------6-6-7-7-6/7-----6----|
+A|------------------------------------------|
+E|------------------------------------------|
+
+E|-----------------------------16/17-17---------------------|
+B|--17-16--12-12-14-14-14-16/17--------16-17-12-14--5-7-7p9-|
+G|----------------------------------------------------------|
+D|----------------------------------------------------------|
+A|----------------------------------------------------------|
+E|----------------------------------------------------------|
+
+E|-----------------------------|
+B|-16-17-12-14--5-7-7p9---17---|
+G|-----------------------------|
+D|-----------------------------|
+A|-----------------------------|
+E|-----------------------------|
+
+                 A9               F#m
+No santo dos santos a fumaça me esconde
+                 C#m       B9             A9         F#m
+Só teus olhos me veem    debaixo de Tuas asas é meu abrigo
+             C#m               B9  A9             B9                E
+Meu lugar secreto só Tua graça me basta e Tua presença é o meu prazer
+        E             A9
+Tua presença, Tua presença é o meu prazer
+        E            A9
+Tua presença, Tua presença é o meu prazer
+         C#m         B9
+Tua presença, Tua presença é o meu prazer
+       A9            B9
+Tua Presença, Tua presença é o meu prazer
+
+                 A9                F#m
+No santo dos santos a fumaça me esconde
+                  C#m      B9             A9         F#m
+Só teus olhos me veem    debaixo de Tuas asas é meu abrigo
+              C#m              B9  A9             B9                E
+Meu lugar secreto só Tua graça me basta e Tua presença é o meu prazer
+             B9  A9             B9                E
+Só Tua graça me basta e Tua presença é o meu prazer
+
+[Acordes]
+A = X 0 2 2 2 0
+A9 = X 0 2 2 0 0
+A9/F# = 2 X 2 2 0 0
+B = X 2 4 4 4 2
+B/E = X 7 9 8 7 7
+B4 = X 2 4 4 5 2
+B9 = X 2 4 4 2 2
+C#m = X 4 6 6 5 4
+C#m7 = X 4 6 4 5 4
+E = 0 2 2 1 0 0
+E/B = X 2 2 1 0 0
+E/C# = X 4 2 1 0 0
+E/G# = 4 X 2 4 5 X
+E4 = 0 2 2 2 0 0
+E9 = 0 2 4 1 0 0
+F#m = 2 4 4 2 2 2
