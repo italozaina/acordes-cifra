@@ -9,7 +9,18 @@ function transformar(textoMusica) {
     foraMusica = "(?=\\s|$)(?! \\w)",
     padrao = "("+"\\b(" + notas + acentuacoes + numeros + acordes + com + '(?:' + notas + acentuacoes + acordes + com + ')*)'+foraMusica+")",
     regex = new RegExp(padrao, "g");
-        
+
+    let acordesTexto = textoMusica.split('[Acordes]')[1];
+    let novosAcordesSeparados = acordesTexto.split('\n')
+    let novosAcordes = [];
+    novosAcordesSeparados.forEach(linha => {
+        let sep = linha.split(' = ');
+        if(sep[0] != '')
+            novosAcordes.push({ n: sep[0], m: sep[1], d: null, p: null});
+    });
+    
+    biblioteca.setAcordesCustomizados(novosAcordes);    
+
     let separadoPorLinhas = textoMusica.split('\n');
 
     alterado = [];

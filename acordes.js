@@ -184,6 +184,8 @@ class Acorde {
 
 class BibliotecaAcorde {
 
+    bibliotecaAcordesCustomizado = [];
+
     bibliotecaAcordesBasicos = [
         { n: 'C', m: 'X 3 2 0 1 0', d: '032010', p: null},
         { n: 'C#', m: 'X 4 6 6 6 4', d: '012341', p: true},
@@ -250,11 +252,16 @@ class BibliotecaAcorde {
         bibliotecaAcordesFinal = bibliotecaAcordesFinal.concat(this.bibliotecaAcordesBasicos2);
         bibliotecaAcordesFinal = bibliotecaAcordesFinal.concat(this.bibliotecaAcordesMenores);
         bibliotecaAcordesFinal = bibliotecaAcordesFinal.concat(this.bibliotecaAcordesSetima);
+        bibliotecaAcordesFinal = bibliotecaAcordesFinal.concat(this.bibliotecaAcordesCustomizado);
         return bibliotecaAcordesFinal;
     }
 
     getAcordePorCifra(cifra){
         return this.getTodosAcordes().find(acorde => acorde.n == cifra);
+    }
+
+    setAcordesCustomizados(acordes){
+        this.bibliotecaAcordesCustomizado = acordes;
     }
 }
 
