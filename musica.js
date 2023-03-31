@@ -75,7 +75,7 @@ function transformar(textoMusica) {
 };
 
 function carregaArquivo(nomeArquivo){
-    fetch(`/musicas/${nomeArquivo}.txt`)
+    fetch(`musicas/${nomeArquivo}.txt`)
     .then(function(response) {
         response.text().then(function(text) {  
         transformar(text);

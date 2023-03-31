@@ -64,9 +64,9 @@ sendo Deus
 
 Capotraste na 1ª casa
 [Acordes]
-A  = X 0 2 2 2 0
-A/C#  = X 4 2 2 2 X
-Am/C  = X 3 X 2 X X
-C#m7  = X 4 6 4 5 4
-E  = 0 2 2 1 0 0
-E/D  = X X 0 1 0 0
+A = X 0 2 2 2 0
+A/C# = X 4 2 2 2 X
+Am/C = X 3 X 2 X X
+C#m7 = X 4 6 4 5 4
+E = 0 2 2 1 0 0
+E/D = X X 0 1 0 0
