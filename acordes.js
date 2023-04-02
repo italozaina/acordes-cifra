@@ -184,6 +184,8 @@ class Acorde {
 
 class BibliotecaAcorde {
 
+    basesAcordes = [{base: "C", posicao: 1}, {base: "C#", posicao: 2}, {base: "Db", posicao: 2}, {base: "D", posicao: 3}, {base: "D#", posicao: 4}, {base: "Eb", posicao: 4}, {base: "E", posicao: 5}, {base: "F", posicao: 6}, {base: "F#", posicao: 7}, {base: "Gb", posicao: 7}, {base: "G", posicao: 8}, {base: "G#", posicao: 9}, {base: "Ab", posicao: 9}, {base: "A", posicao: 10}, {base: "A#", posicao: 11}, {base: "Bb", posicao: 11}, {base: "B", posicao: 12}];
+
     bibliotecaAcordesCustomizado = [];
 
     bibliotecaAcordesBasicos = [
@@ -262,6 +264,29 @@ class BibliotecaAcorde {
 
     setAcordesCustomizados(acordes){
         this.bibliotecaAcordesCustomizado = acordes;
+    }
+
+    getBaseAcordeAtual(acorde){
+        let base = acorde[0];
+        if(acorde[1] == '#' || acorde[1] == 'b')
+            base = base + acorde[1];        
+        return this.basesAcordes.find(baseAcorde => baseAcorde.base == base);
+    }
+
+    getBaseAcordePorPosicao(posicao){
+        return this.basesAcordes.find(baseAcorde => baseAcorde.posicao == posicao).base;
+    }
+
+    getNumeroBaseAcorde(acorde){        
+        return (this.getBaseAcordeAtual(acorde)).posicao;
+    }
+
+    alterarBaseAcorde(novaBase, acorde){
+        let baseAntiga = this.getBaseAcordeAtual(acorde).base;        
+        if(baseAntiga.length > 1)
+            return novaBase + acorde.substring(2);
+        else
+            return novaBase + acorde.substring(1);
     }
 }
 

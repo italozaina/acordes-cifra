@@ -35,15 +35,8 @@ Sendo que a biblioteca é gerada por esta notação de texto **"X 3 2 0 1 0"** c
 * Pestanas simples
 * Biblioteca de acordes básicos
 * Leitura de cifra para apresentar acorde
+* Transposição de acorde
 
 ## TODO
 
-* Transposição de acorde
 * Grelha com capotraste
-
-```
-1 2  3 4  5 6 7  8 9  1011 12
-C C# D D# E F F# G G# A A# B
-1 2  3 4  5 6 7  8 9  1011 12
-C Db D Eb E F Gb G Ab A Bb B
-```
