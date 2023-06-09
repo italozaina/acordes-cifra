@@ -63,12 +63,22 @@
     <h1>Exemplos de músicas cifradas</h1>
     <p>Clique em uma música para ver as cifras</p>
     <input type="number" name="posicao" step="1" id="posicao" value="0" onchange="transposicao(event)">
+    <button onclick="transposicaoBotao(1)">+ 1/2 tom</button>
+    <button onclick="transposicaoBotao(-1)">- 1/2 tom</button>
+    <Button>reset</Button>
     <div class="row">
         <div class="col musicas">
+            <p data-arquivo="Nívea Soares - Teu Amor Não Falha" onclick="abrirMusica(event)">Nívea Soares - Teu Amor Não Falha</p>
+            <p data-arquivo="Fernandinho - Pra Sempre" onclick="abrirMusica(event)">Fernandinho - Pra Sempre</p>
+            <p data-arquivo="Aline Barros - Diante da Cruz" onclick="abrirMusica(event)">Aline Barros - Diante da Cruz</p>
+            <p data-arquivo="Nívea Soares - Eu Vou Construir" onclick="abrirMusica(event)">Nívea Soares - Eu Vou Construir</p>
+            <p data-arquivo="Nívea Soares - Que Se Abram Os Céus" onclick="abrirMusica(event)">Nívea Soares - Que Se Abram Os Céus</p>
+        </div>
+        <div class="col musicas">
             <p data-arquivo="Marcus Salles - Estamos de Pé" onclick="abrirMusica(event)">Marcus Salles - Estamos de Pé</p>
-            <p data-arquivo="Diante do Trono - Levanto Um Aleluia (part. Isaías Saad)" onclick="abrirMusica(event)">Diante do Trono - Levanto Um Aleluia (part. Isaías Saad)</p>
+            <p data-arquivo="Diante do Trono - Levanto Um Aleluia (part. Isaías Saad)" onclick="abrirMusica(event)">Diante do Trono - Levanto Um Aleluia</p>
             <p data-arquivo="Relevans Music - Vencedor" onclick="abrirMusica(event)">Relevans Music - Vencedor</p>
-            <p data-arquivo="Fernandinho - Porque Ele Vive _ Cristo Valerá (Pot-Pourri)" onclick="abrirMusica(event)">Fernandinho - Porque Ele Vive _ Cristo Valerá (Pot-Pourri)</p>
+            <p data-arquivo="Fernandinho - Porque Ele Vive _ Cristo Valerá (Pot-Pourri)" onclick="abrirMusica(event)">Fernandinho - Porque Ele Vive</p>
             <p data-arquivo="Morada - Jesus em tua presença" onclick="abrirMusica(event)">Morada - Jesus em tua presença</p>
         </div>
         <div class="col musicas">

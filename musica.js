@@ -119,3 +119,32 @@ function abrirMusica(event){
     let nome = event.target.getAttribute('data-arquivo');    
     carregaArquivo(nome)    
 }
+
+function transposicaoBotao(meioTom) { // enviar 1 ou -1    
+    this.tomAtual = this.tomAtual + meioTom;    
+    document.querySelectorAll('#resultado > pre > b').forEach(element => {
+        // console.log(element.innerText);
+        let acorde = element.innerText;
+        let baixo = element.innerText.split('/');        
+        let numeroAtual = biblioteca.getNumeroBaseAcorde(acorde);
+        let numeroTranposto = numeroAtual + (meioTom);        
+        if(numeroTranposto > 12)
+            numeroTranposto = 1;
+        if(numeroTranposto < 1)
+            numeroTranposto = 12;        
+        let novaBase = biblioteca.getBaseAcordePorPosicao(numeroTranposto);
+        let novoAcorde = biblioteca.alterarBaseAcorde(novaBase,baixo[0]);
+        // alterar baixo
+        if(baixo.length > 1){
+            let numeroAtualBaixo = biblioteca.getNumeroBaseAcorde(baixo[1]);
+            let numeroTranpostoBaixo = numeroAtualBaixo + (meioTom);        
+            if(numeroTranpostoBaixo > 12)
+                numeroTranpostoBaixo = 1;
+            if(numeroTranpostoBaixo < 1)
+                numeroTranpostoBaixo = 12;  
+            let novaBaseBaixo = biblioteca.getBaseAcordePorPosicao(numeroTranpostoBaixo);
+            novoAcorde = novoAcorde + '/' + biblioteca.alterarBaseAcorde(novaBaseBaixo,baixo[1]);
+        }
+        element.innerText = novoAcorde;
+    });
+}
