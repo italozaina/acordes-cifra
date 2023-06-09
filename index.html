@@ -62,10 +62,10 @@
 <body>
     <h1>Exemplos de músicas cifradas</h1>
     <p>Clique em uma música para ver as cifras</p>
-    <input type="number" name="posicao" step="1" id="posicao" value="0" onchange="transposicao(event)">
+    <!-- <input type="number" name="posicao" step="1" id="posicao" value="0" onchange="transposicao(event)"> -->
     <button onclick="transposicaoBotao(1)">+ 1/2 tom</button>
     <button onclick="transposicaoBotao(-1)">- 1/2 tom</button>
-    <Button>reset</Button>
+    <Button onclick="reset()">reset</Button>
     <div class="row">
         <div class="col musicas">
             <p data-arquivo="Nívea Soares - Teu Amor Não Falha" onclick="abrirMusica(event)">Nívea Soares - Teu Amor Não Falha</p>

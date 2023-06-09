@@ -1,4 +1,5 @@
 var tomAtual = 0;
+var ultimaMusica;
 function transformar(textoMusica) {
     // (?:[A-G](?:b|bb)*(?:#|##|sus|maj|min|aug|m|M|\\+|-|dim)*[\d\/]*)*)(?=\s|$)(?! \w))
 
@@ -106,6 +107,7 @@ function transposicao(event) { // enviar 1 ou -1
 }
 
 function carregaArquivo(nomeArquivo){
+    ultimaMusica = nomeArquivo;
     tomAtual = 0;
     fetch(`musicas/${nomeArquivo}.txt`)
     .then(function(response) {
@@ -117,11 +119,15 @@ function carregaArquivo(nomeArquivo){
 
 function abrirMusica(event){
     let nome = event.target.getAttribute('data-arquivo');    
-    carregaArquivo(nome)    
+    carregaArquivo(nome);
+}
+
+function reset() {
+    carregaArquivo(ultimaMusica);
 }
 
 function transposicaoBotao(meioTom) { // enviar 1 ou -1    
-    this.tomAtual = this.tomAtual + meioTom;    
+    tomAtual = tomAtual + meioTom;    
     document.querySelectorAll('#resultado > pre > b').forEach(element => {
         // console.log(element.innerText);
         let acorde = element.innerText;
